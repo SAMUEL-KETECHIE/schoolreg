@@ -11,21 +11,15 @@ if(isset($_SESSION["uid"])){
 <!DOCTYPE html>
 
 <html>
-	<?php
-    include "header.php";
-    ?>
+<?php include "header.php"; ?>
 <body >
-<?php
-include "navbar.php";
-?>
+<?php include "navbar.php"; ?>
 <!-- END OF NAVIGATION BAR -->
-	<div class="container-fluid">
-        <img src="img/logo.jpg" alt="Back">
+	<div class="container-fluid page-bg" >
+
 	</div>
 <!-- end of Main body -->
-        <?php
-        include "footer.php";
-        ?>
+<?php include "footer.php"; ?>
 <!-- end of footer -->
 </body>
 </html>

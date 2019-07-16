@@ -68,8 +68,24 @@
 	border-radius: 10px;
 }
 
-#txtpaddress{
-	width: 39rem;
-	height: 9rem;
+.txtArea{
+	width: 29rem;
+	height: 10rem;
+}
+
+.page-bg{
+	background-image: url('../img/homebg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	opacity: 0.9;
+}
+
+.page-gradient{
+	background-image: url('../img/maldives.jpg');
+	background-repeat: repeat-y;
+	background-size: cover;
+	height: 100vh;
+	opacity: 20;
 }
 
