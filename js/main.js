@@ -55,7 +55,7 @@ function clearTextFields(e) {
 
                 $("#txtstdname").value="";
 
-                bootbox.alert(stdname);
+                //bootbox.alert(stdname);
             }
         }
     }
