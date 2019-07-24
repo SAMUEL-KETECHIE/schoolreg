@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
                 <li class="active" ><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>&nbsp;&nbsp;&nbsp;
-                <li ><a href="register.php"><span class="glyphicon glyphicon-hourglass"></span> Admission Form</a></li>&nbsp;&nbsp;
+                <li ><a href="../admission/"><span class="glyphicon glyphicon-hourglass"></span> Admission Form</a></li>&nbsp;&nbsp;
                 &nbsp;
                 <li class="pull-right">
                     <form class="navbar-form" role="search">
