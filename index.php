@@ -15,11 +15,19 @@ if(isset($_SESSION["uid"])){
 <body >
 <?php include "navbar.php"; ?>
 <!-- END OF NAVIGATION BAR -->
-	<div class="container-fluid page-bg" >
+<div id="wrapper">
+<?php
+include "sidebar.php";
+?>
+    <div  id="page-content-wrapper">
+        <div class="container-fluid" >
 
-	</div>
-<!-- end of Main body -->
-<?php include "footer.php"; ?>
-<!-- end of footer -->
+        </div>
+    </div>
+
+    <!-- end of Main body -->
+    <?php include "footer.php"; ?>
+    <!-- end of footer -->
+</div>
 </body>
 </html>

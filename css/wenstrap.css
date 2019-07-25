@@ -50,6 +50,7 @@
 	font-size: 20px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	border: 1px;
+	text-justify: auto;
 }
 
 .footTxt{
@@ -82,10 +83,21 @@
 }
 
 .page-gradient{
-	background-image: url('../img/maldives.jpg');
+	/*background-image: url('../img/maldives.jpg'); */
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 130vh;
+	height: 120vh;
 	opacity: 100;
 }
 
+.page-white{
+	background-color: white;
+	opacity: 100;
+}
+
+@media(min-width:768px) {
+
+	#txt_search{
+		width: 41rem;
+	}
+}
