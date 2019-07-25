@@ -13,19 +13,15 @@
         <li>
             <a href="../">Dashboard</a>
         </li>
-        <hr>
         <li>
             <a href="../admission/">Admission Form</a>
         </li>
-        <hr>
         <li>
             <a href="../student/">View Students</a>
         </li>
-        <hr>
         <li>
             <a href="#">Subjects</a>
         </li>
-        <hr>
         <li>
             <a href="#">Classes</a>
         </li>

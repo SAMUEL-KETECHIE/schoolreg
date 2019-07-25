@@ -14,6 +14,7 @@
                 <li ><a href="../admission/"><span class="glyphicon glyphicon-hourglass"></span> Admission Form</a></li>&nbsp;&nbsp;
                 <li ><a href="../student/"><span class="glyphicon glyphicon-user"></span> Students</a></li>&nbsp;&nbsp;
                 &nbsp;
+                <!--
                 <li class="">
                     <form class="navbar-form" role="search">
                         <input class="form-control" type="text" id="txt_search" placeholder="Search..."/>
@@ -22,9 +23,10 @@
                         </button>
                     </form>
                 </li>
-                <li class="" ><a href="#" class="btn navbar-btn">Messages <span class="badge badge-dark"> 20 </span></a></li>
-                <li class="" ><a href="#" class="btn navbar-btn"><span class="glyphicon glyphicon-log-in"></span> SignIn</a></li>
-                <li class="pull-right" ><a href="#" class="btn navbar-btn"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                -->
+                <li class="" ><a href="#" class="">Messages <span class="badge badge-dark"> 20 </span></a></li>
+                <li class="" ><a href="#" class=""><span class="glyphicon glyphicon-log-in"></span> SignIn</a></li>
+                <li class="" ><a href="#" class=""><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
             </ul>
 
