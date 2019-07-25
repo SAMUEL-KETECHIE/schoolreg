@@ -32,3 +32,26 @@ body{
 	font-size: 12px;
 	text-decoration: none;
 }
+
+
+/** Background transparent**/
+
+.main-container{
+	background-image: url('urlher.jpg');
+	background-repeat: none;
+	background-size: 100%;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	
+}
+
+.overlay{
+	background: #0000008a;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}

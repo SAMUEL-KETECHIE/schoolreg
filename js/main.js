@@ -36,30 +36,76 @@ $(document).ready(function () {
     //btn_reset_std
 
     $("#btn_save_std").click(function (e) {
-        submitAddmissionForm(e);
+        submitStudentInfoForm(e);
+    });
+
+    $("#btn_save_parent").click(function (e) {
+        submitParentInfoForm(e);
+    });
+
+    $("#btn_save_house").click(function (e) {
+        submitHouseAndFinalInfoForm(e);
     });
 
     $("#btn_reset_std").click(function (e) {
         clearTextFields(e);
-    })
+    });
 });
 
-function submitAddmissionForm(e) {
+function submitHouseAndFinalInfoForm(e) {
     e.preventDefault();
-    bootbox.alert("Form Submitted");
+    let fields={};
+    let validation=validateTextFields(fields);
+    let requestObj={};
+    if(validation===true){
+        let poster= postRequest('houseAction.php',requestObj,function (e) {
+        });
+        if(poster===true){
+            bootbox.alert("Form Submitted");
+        }
+    }
 }
 
-function clearTextFields(e) {
+function submitParentInfoForm(e) {
+    e.preventDefault();
+    let fields={};
+    let validation=validateTextFields(fields);
+    let requestObj={};
+    if(validation===true){
+        let poster= postRequest('parentAction.php',requestObj,function (e) {
+            window.location="houseForm.php";
+        });
+        if(poster===true){
+            bootbox.alert("Form Submitted");
+        }
+    }
+}
+
+function submitStudentInfoForm(e) {
+    e.preventDefault();
+    let fields={};
+    let validation=validateTextFields(fields);
+    let requestObj={};
+    if(validation===true){
+        let poster= postRequest('studentAction.php',requestObj,function (e) {
+            window.location="parentForm.php";
+        });
+        if(poster===true){
+            bootbox.alert("Form Submitted");
+        }
+    }
+}
+
+function clearTextFields(e,fields) {
     e.preventDefault();
     bootbox.confirm({
         message: "Are you sure you want to reset clear all the fields ?",
         callback: function (result) {
             if(result===true){
-                let stdname=$("#txtstdname").val();
-
-                $("#txtstdname").value="";
-
-                //bootbox.alert(stdname);
+                for(let field in fields){
+                    field.value ="";
+                }
+                //let stdname=$("#txtstdname").val();
             }
         }
     }
@@ -68,13 +114,18 @@ function clearTextFields(e) {
 
 function validateTextFields(fields){
 	let errorMessage="";
-	for(var field in fields){
+	for(let field in fields){
 		if(field==="" || field===undefined || field.length===0 || field.value===""){
 			let fieldName=field.getAttribute(name);
 			errorMessage +=fieldName + "cannot be empty";
 		}
 	}
 	showSnackBarDanger(errorMessage);
+	if(errorMessage===""){
+	    return true;
+    }else {
+	    return false;
+    }
 }
 
 
@@ -119,7 +170,7 @@ function  postRequest(uri,reqObject,callback=null) {
             if(status===true){
                 message="Data saved successfully";
                 showSnackBarSuccess(message);
-                callback();
+                callback(data);
                 return true;
             }else{
                 message="Data was not saved. Check and try again.";

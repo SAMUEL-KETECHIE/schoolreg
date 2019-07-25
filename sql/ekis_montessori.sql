@@ -47,7 +47,7 @@ create table house(
     id int(11) not null auto_increment,
     h_addr varchar(50) not null,
     h_popu int(10),
-    h_lang char(10) not null,
+    h_lang varchar(10) not null,
     std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
@@ -69,9 +69,9 @@ create table healthrecords(
     spec_nds varchar(20),
     sick_con varchar(20),
     med varchar(20),
-    allegies char(3),
-    eye_prob char(3),
-    ear_prob char(3),
+    allegies varchar(30),
+    eye_prob varchar(30),
+    ear_prob varchar(30),
     others varchar(10),
     std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)

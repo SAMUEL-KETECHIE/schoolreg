@@ -2,7 +2,7 @@
 $server ="localhost";
 $user ="root";
 $password ="";
-$dbase ="adminform";
+$dbase ="ekis_montessori";
 $portNumber="3308";
 
 $conn = mysqli_connect($server,$user,$password,$dbase,$portNumber);
