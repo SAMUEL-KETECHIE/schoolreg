@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/wenstrap.css" />
         <link rel="stylesheet" href="css/sidebar.css" />
+        <link rel="stylesheet" href="css/homecard.css" />
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

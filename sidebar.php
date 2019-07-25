@@ -2,42 +2,41 @@
 <!-- Sidebar -->
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
-
-        <div>
-            <br>
-            <br>
-            <img src="../profilepics/logo.jpg" class="img-circle img-responsive" />
+        <div class="profile-img">
+            <img src="../profilepics/ekisLogo.png" class="img-circle img-responsive" />
         </div>
-        <li class="sidebar-brand">
+        <div class="sidebar-brand">
+            <div class="user-profile-online"></div>
             <div class="user-profile-name">Wendolin</div>
-        </li>
+        </div>
+        <hr>
         <li>
             <a href="../">Dashboard</a>
         </li>
-        <li class="divider"></li>
+        <hr>
         <li>
             <a href="../admission/">Admission Form</a>
         </li>
-        <li class="divider"></li>
+        <hr>
         <li>
-            <a href="#">View Students</a>
+            <a href="../student/">View Students</a>
         </li>
+        <hr>
+        <li>
+            <a href="#">Subjects</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#">Classes</a>
+        </li>
+        <li class="divider"></li>
         <li>
             <a href="#">Events</a>
         </li>
         <li class="divider"></li>
         <li>
-            <a href="#">About</a>
+            <a href="#">About Us</a>
         </li>
-        <li class="divider"></li>
-        <li>
-            <a href="#">Services</a>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <a href="#">Contact</a>
-        </li>
-        <li class="divider"></li>
     </ul>
 </div>
 <!-- /#sidebar-wrapper -->

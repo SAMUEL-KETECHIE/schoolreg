@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
+    /*
     document.querySelector("#snack_bar_warning").style.display = "none";
     document.querySelector("#snack_bar_success").style.display = "none";
     document.querySelector("#snack_bar_danger").style.display = "none";
+
+     */
 
     let stdname=$("#txtstdname").val();
     let stddob= $("#txtdob").val();

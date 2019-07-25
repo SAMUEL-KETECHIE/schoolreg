@@ -12,8 +12,9 @@
             <ul class="nav navbar-nav">
                 <li class="active" ><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>&nbsp;&nbsp;&nbsp;
                 <li ><a href="../admission/"><span class="glyphicon glyphicon-hourglass"></span> Admission Form</a></li>&nbsp;&nbsp;
+                <li ><a href="../student/"><span class="glyphicon glyphicon-user"></span> Students</a></li>&nbsp;&nbsp;
                 &nbsp;
-                <li class="pull-right">
+                <li class="">
                     <form class="navbar-form" role="search">
                         <input class="form-control" type="text" id="txt_search" placeholder="Search..."/>
                         <button class="btn btn-info" type="submit" id="btn_search" >
@@ -21,12 +22,13 @@
                         </button>
                     </form>
                 </li>
-
+                <li class="" ><a href="#" class="btn navbar-btn">Messages <span class="badge badge-dark"> 20 </span></a></li>
+                <li class="" ><a href="#" class="btn navbar-btn"><span class="glyphicon glyphicon-log-in"></span> SignIn</a></li>
+                <li class="pull-right" ><a href="#" class="btn navbar-btn"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
             </ul>
 
         </div>
     </nav>
-
 </div>
 <p><br></p>

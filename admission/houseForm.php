@@ -28,29 +28,29 @@ include "../navbar.php";
             <div class="row">
                 <div class="col-md-1 col-xs-1 col-lg-1"></div>
                 <div class="col-md-10 col-xs-10 col-lg-10 page-gradient">
-                    <p class="text-center text-primary panel panel-heading panel-primary txtHead">
-                        <br>
-                        Admission Form</p>
-                    <form class="form-horizontal page-white" action="" method="POST">
+                    <h3 class="text-center text-primary panel panel-heading panel-primary txtHead">
+                        Admission Form
+                    </h3>
+                    <form class="form-horizontal page-white form-card" action="" method="POST">
                         <div class="row">
                             <div class="col-md-3 col-lg-3"></div>
                             <div class="col-md-3 col-lg-3">
-                                <p class="text-center text-info">House Information</p>
+                                <h4 class="text-center text-info">House Information</h4>
 
-                                <label class="label label-info" for="txtpop"> <span class="glyphicon glyphicon-"></span> House Population </label>
+                                <label class="label label-info form-labels" for="txtpop"> <span class="glyphicon glyphicon-"></span> House Population </label>
                                 <input class="form-control" id="txtpop" name="txtpop" type="number"/>
                                 <br>
 
-                                <label class="label label-info" for="txthlang"> Home Language </label>
+                                <label class="label label-info form-labels" for="txthlang"> Home Language </label>
                                 <input class="form-control" type="text" id="txthlang" name="txthlang" placeholder="Twi" autocomplete="off"/>
                                 <br>
 
-                                <label class="label label-info" for="txthaddr"> House Address/E-mail </label>
+                                <label class="label label-info form-labels" for="txthaddr"> House Address/E-mail </label>
                                 <textarea class="form-control txtArea" type="text" id="txthaddr" name="txthaddr" autocomplete="off">
                                 </textarea>
                                 <br>
 
-                                <label class="label label-info" for="txtother"> Other Information </label>
+                                <label class="label label-info form-labels" for="txtother"> Other Information </label>
                                 <textarea class="form-control txtArea" type="text" id="txtother" name="txtother" autocomplete="off">
                                 </textarea>
                                 <br>
