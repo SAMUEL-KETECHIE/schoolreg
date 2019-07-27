@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 }
 /*Snack Bar*/
-#snack_bar, #snack_bar_success, #snack_bar_warning, #snack_bar_error{
+#snack_bar, #snack_bar_success, #snack_bar_warning, #snack_bar_danger{
 	visibility: hidden;
 	min-width: 250px;
 	margin-left: -125px;
@@ -17,13 +17,13 @@
 	border-radius: 2px;
 	padding: 16px;
 	position: fixed;
-	z-index: 10;
+	z-index: 10000;
 	left: 50%;
 	bottom: 30px;
 	font-size: 17px;
 }
 
-#snack_bar.show, #snack_bar_success.show, #snack_bar_warning.show, #snack_bar_error.show{
+#snack_bar.show, #snack_bar_success.show, #snack_bar_warning.show, #snack_bar_danger.show{
 	visibility: visible;
 	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
 	animation: fadein 0.5s, fadeout 0.5s 2.5s;

@@ -38,8 +38,20 @@ include "../navbar.php";
 
                                 <label class="label label-info form-labels" for="txtpob"> <span class="glyphicon glyphicon-map-marker"></span> Place of Birth </label>
                                 <input class="form-control" type="text" id="txtpob" name="txtpob" required placeholder="Kokomlemle-Accra" autocomplete="off"/>
+                                <br>
+                                <label class="label label-info form-labels" for="txtstdaddr"> <span class="glyphicon glyphicon-map-marker"></span> Address/Location </label>
+                                <input class="form-control" type="text" id="txtstdaddr" name="txtstdaddr" placeholder="Legon" autocomplete="off"/>
+                                <br>
+
+                                <label class="label label-info form-labels" for="stdimage"> <span class="glyphicon glyphicon-picture"></span> Child's Image </label>
+                                <input class="form-control" type="file" id="stdimage" name="stdimage" autocomplete="off"/>
+
                                 <hr>
 
+
+
+                            </div>
+                            <div class="col-md-3 col-lg-3">
                                 <h4 class="text-center text-info">School Records</h4>
 
                                 <label class="label label-info form-labels" for="txtprevsch1"> <span class="glyphicon glyphicon-certificate"></span> Previous School 1 </label>
@@ -54,11 +66,6 @@ include "../navbar.php";
                                 <label class="label label-info form-labels" for="txtprevschaddr1"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
                                 <input class="form-control" type="date" name="txtprevschaddr1" id="txtprevschaddr1" autocomplete="off"/>
                                 <br>
-
-                            </div>
-                            <div class="col-md-3 col-lg-3">
-                                <h4 class="text-center text-info "><br></h4>
-
                                 <label class="label label-info form-labels" for="txtprevsch2"> <span class="glyphicon glyphicon-certificate"></span> Previous School 2 (Optional)</label>
                                 <input class="form-control" type="text" name="txtprevsch2" id="txtprevsch2" placeholder="Palma Int. School" autocomplete="off"/>
                                 <br>
@@ -70,20 +77,6 @@ include "../navbar.php";
                                 <br>
                                 <label class="label label-info form-labels" for="txtprevschaddr2"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
                                 <input class="form-control" type="date" name="txtprevschaddr2" id="txtprevschaddr2" autocomplete="off"/>
-                                <br>
-                                <br>
-
-                                <label class="label label-info form-labels" for="txtprevsch3"> <span class="glyphicon glyphicon-certificate"></span> Previous School 3 (Optional)</label>
-                                <input class="form-control" type="text" name="txtprevsch3" id="txtprevsch3" placeholder="Eltrich Int. School" autocomplete="off"/>
-                                <br>
-                                <label class="label label-info form-labels" for="txtprevschlevel3"> <span class="glyphicon glyphicon-certificate"></span> Level Reached </label>
-                                <input class="form-control" type="number" name="txtprevschlevel3" id="txtprevschlevel3" autocomplete="off"/>
-                                <br>
-                                <label class="label label-info form-labels" for="txtprevschdate3"> <span class="glyphicon glyphicon-calendar"></span> Date Attended </label>
-                                <input class="form-control" type="date" name="txtprevschdate3" id="txtprevschdate3" autocomplete="off"/>
-                                <br>
-                                <label class="label label-info form-labels" for="txtprevschaddr3"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
-                                <input class="form-control" type="date" name="txtprevschaddr3" id="txtprevschaddr3" autocomplete="off"/>
                                 <br>
                                 <hr>
                             </div>
@@ -118,13 +111,21 @@ include "../navbar.php";
                                     <button class="btn btn-danger" id="btn_reset_std"><span class="glyphicon glyphicon-refresh"></span> &nbsp;Reset </button>
                                     <button class="btn btn-warning pull-right" id="btn_save_std"><span class="glyphicon glyphicon-check"></span>Save and Continue ></button>
                                 <hr>
-                                <br>
-                                <br>
-                                <br>
+
                                 <br>
                             </div>
 
                             <div class="col-md-1 col-lg-1"></div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="alert alert-warning" id="snack_bar_warning"></div>
+                                <div class="alert alert-success" id="snack_bar_success"></div>
+                                <div class="alert alert-danger" id="snack_bar_danger"></div>
+                            </div>
+                            <div class="col-md-4"></div>
                         </div>
                     </form>
                 </div>

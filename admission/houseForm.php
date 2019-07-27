@@ -37,8 +37,8 @@ include "../navbar.php";
                             <div class="col-md-3 col-lg-3">
                                 <h4 class="text-center text-info">House Information</h4>
 
-                                <label class="label label-info form-labels" for="txtpop"> <span class="glyphicon glyphicon-"></span> House Population </label>
-                                <input class="form-control" id="txtpop" name="txtpop" type="number"/>
+                                <label class="label label-info form-labels" for="txtpopu"> <span class="glyphicon glyphicon-"></span> House Population </label>
+                                <input class="form-control" id="txtpopu" name="txtpopu" type="number"/>
                                 <br>
 
                                 <label class="label label-info form-labels" for="txthlang"> Home Language </label>
@@ -56,6 +56,9 @@ include "../navbar.php";
                                 <br>
                                 <hr>
                                     <button class="btn btn-default" id="btn_back_to_parent"><span class="glyphicon glyphicon-chevron-left"></span> &nbsp; Back </button>
+                                    <button class="btn btn-danger pull-right" id="btn_reset_house"><span class="glyphicon glyphicon-remove-circle"></span> &nbsp;Reset </button>
+                                <br>
+                                <br>
                                     <button class="btn btn-success pull-right" id="btn_save_house"><span class="glyphicon glyphicon-send"></span> &nbsp;Save and Submit </button>
                                 <br>
                                 <br>
@@ -64,6 +67,15 @@ include "../navbar.php";
                                 <hr>
                             </div>
                             <div class="col-md-3 col-lg-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="alert alert-warning" id="snack_bar_warning"></div>
+                                <div class="alert alert-success" id="snack_bar_success"></div>
+                                <div class="alert alert-danger" id="snack_bar_danger"></div>
+                            </div>
+                            <div class="col-md-4"></div>
                         </div>
                     </form>
                 </div>

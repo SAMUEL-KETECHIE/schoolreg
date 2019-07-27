@@ -10,6 +10,7 @@ create table student(
     std_dob date not null,
     std_pob varchar(20) not null,
     std_haddr varchar(50),
+    std_class varchar(50),
     primary key (std_id)
 );
 
@@ -22,11 +23,12 @@ create table parent(
     f_htown varchar(20) not null,
     f_phoneno varchar(15) not null,
     f_occ varchar(20),
-    m_name varchar(50) not null,
-    m_nlty varchar(58) not null,
-    m_htown varchar(20) not null,
-    m_phoneno varchar(15) not null,
+    m_name varchar(50),
+    m_nlty varchar(58),
+    m_htown varchar(20),
+    m_phoneno varchar(15),
     m_occ varchar(20),
+    parent_addr varchar(200),
     std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
@@ -46,8 +48,8 @@ desc nextofkin;
 create table house(
     id int(11) not null auto_increment,
     h_addr varchar(50) not null,
-    h_popu int(10),
-    h_lang varchar(10) not null,
+    h_popu int(11),
+    h_lang varchar(50) not null,
     std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
@@ -72,9 +74,27 @@ create table healthrecords(
     allegies varchar(30),
     eye_prob varchar(30),
     ear_prob varchar(30),
-    others varchar(10),
     std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
 desc healthrecords;
 
+
+
+create table studentimage(
+    id int(11) not null auto_increment,
+    image varchar(200),
+    image_desc varchar(10),
+    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+primary key (id)
+);
+desc studentimage;
+
+create table otherinfo(
+    id int(11) not null auto_increment,
+    others varchar(200),
+    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    primary key (id)
+);
+
+desc otherinfo;

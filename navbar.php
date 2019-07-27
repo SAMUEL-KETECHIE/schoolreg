@@ -24,7 +24,7 @@
                     </form>
                 </li>
                 -->
-                <li class="" ><a href="#" class="">Messages <span class="badge badge-dark"> 20 </span></a></li>
+                <li class="" ><a href="#" class=""><span class="glyphicon glyphicon-bell"></span> <span class="badge badge-dark"> 20 </span></a></li>
                 <li class="" ><a href="#" class=""><span class="glyphicon glyphicon-log-in"></span> SignIn</a></li>
                 <li class="" ><a href="#" class=""><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 

@@ -96,6 +96,9 @@ include "../navbar.php";
                                 <input class="form-control" type="tel" name="txtnokphone" id="txtnokphone" placeholder="024xxxxxxx" autocomplete="off"/>
                                 <br>
                                     <button class="btn btn-default" id="btn_back_to_child"><span class="glyphicon glyphicon-chevron-left"></span> &nbsp; Back </button>
+                                    <button class="btn btn-danger pull-right" id="btn_reset_parent"><span class="glyphicon glyphicon-remove-circle"></span> &nbsp;Reset</button>
+                                <br>
+                                <br>
                                     <button class="btn btn-warning pull-right" id="btn_save_parent"><span class="glyphicon glyphicon-check"></span> &nbsp;Save and Continue ></button>
                                 <br>
                                 <br>
@@ -104,6 +107,15 @@ include "../navbar.php";
                                 <hr>
                             </div>
                             <div class="col-md-1 col-lg-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="alert alert-warning" id="snack_bar_warning"></div>
+                                <div class="alert alert-success" id="snack_bar_success"></div>
+                                <div class="alert alert-danger" id="snack_bar_danger"></div>
+                            </div>
+                            <div class="col-md-4"></div>
                         </div>
                     </form>
                 </div>
