@@ -56,6 +56,7 @@ function submitHouseAndFinalInfoForm(e) {
     let other=$("#txtother").val();
 
     let fields={
+        submithouse:1,
         hpopu:hpopu,
         hlang:hlang,
         haddr:haddr,
@@ -65,7 +66,16 @@ function submitHouseAndFinalInfoForm(e) {
     let validation=true;
     let requestObj={};
     if(validation===true){
+        let message="";
         let poster= postRequest('houseAction.php',fields,function (e) {
+            if(e !=""){
+                message="You have successfully saved the admission form."
+                showSnackBarSuccess(message);
+                window.location="../admission/";
+            }else {
+                message="Failed: Data was not saved. Please check and try again.";
+                showSnackBarWarning(message);
+            }
         });
         if(poster===true){
             bootbox.alert("Form Submitted");
@@ -128,7 +138,12 @@ function submitParentInfoForm(e) {
     //let requestObj={};
     if(validation===true){
         let poster= postRequest('parentAction.php',fields,function (e) {
-            window.location="houseForm.php";
+            if(e !=""){
+                showSnackBarSuccess("Data saved successfully");
+                window.location="houseForm";
+            }else {
+                showSnackBarWarning("Data was not saved. Please check and try again");
+            }
         });
         if(poster===true){
             bootbox.alert("Form Submitted");
@@ -235,8 +250,16 @@ function submitStudentInfoForm(e) {
     let validation=true;
     //let requestObj=fields;
     if(validation===true){
+        let  message="";
         let poster= postRequest('studentAction.php',fields,function (e) {
-            window.location="parentForm";
+            if(e !=""){
+                message="Data saved successfully";
+                showSnackBarSuccess(message);
+                window.location="parentForm";
+            }else {
+                message="Data was not saved. Please check and try again";
+                showSnackBarWarning(message);
+            }
         });
         if(poster===true){
             bootbox.alert("Form Submitted");
@@ -334,8 +357,8 @@ function  postRequest(uri,reqObject,callback=null) {
         success	: function(data){
             if(data !="" || data.length !=0){
                 message="Data saved successfully";
-                callback();
-                showSnackBarSuccess(message);
+                callback(data);
+                //showSnackBarSuccess(message);
                 return true;
             }else{
                 message="Data was not saved. Check and try again.";
@@ -375,3 +398,19 @@ function backToParentForm(e) {
     );
 }
 
+
+async function SavePhoto(inp)
+{
+    let formData = new FormData();
+    let photo = inp.files[0];
+
+    formData.append("file", photo);
+
+    try {
+        let r = await fetch('../upload.php', {method: "POST", body: formData});
+        console.log('HTTP response code:',r.status,r.body,r.response);
+    } catch(e) {
+        console.log('Huston we have problem...:', e);
+    }
+
+}

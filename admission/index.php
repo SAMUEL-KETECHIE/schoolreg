@@ -46,15 +46,15 @@ include "../navbar.php";
                                 <label class="label label-info form-labels" for="stdclass"> <span class="glyphicon glyphicon-level-up"></span> Class </label>
                                 <select id="stdclass" name="stdclass" class="form-control">
                                     <option value="">-- Select --</option>
-                                    <option value="Nursery1">Nurser 1</option>
-                                    <option value="Nursery2">Nurser 2</option>
-                                    <option value="Nursery3">Nurser 3</option>
-                                    <option value="class1">Class 1</option>
-                                    <option value="Class2">Class 2</option>
-                                    <option value="Class3">Class 3</option>
-                                    <option value="Class4">Class 4</option>
-                                    <option value="Class5">Class 5</option>
-                                    <option value="Class6">Class 6</option>
+                                    <option value="Nursery 1">Nurser 1</option>
+                                    <option value="Nursery 2">Nurser 2</option>
+                                    <option value="Nursery 3">Nurser 3</option>
+                                    <option value="class 1">Class 1</option>
+                                    <option value="Class 2">Class 2</option>
+                                    <option value="Class 3">Class 3</option>
+                                    <option value="Class 4">Class 4</option>
+                                    <option value="Class 5">Class 5</option>
+                                    <option value="Class 6">Class 6</option>
                                 </select>
                                 <br>
 

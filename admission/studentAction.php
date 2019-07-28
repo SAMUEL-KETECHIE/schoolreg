@@ -1,5 +1,6 @@
 <?php
 include '../db.php';
+session_start();
 
 if(isset($_POST['submitstudent'])){
     $stdname=$_POST['stdname'];
@@ -14,6 +15,7 @@ if(isset($_POST['submitstudent'])){
     $row=mysqli_fetch_array($numresult);
     $lastid=$row['std_id'];
     $studentNo= $stdNo . $lastid;
+    $_SESSION['STDNO']=$studentNo;
 
     $stdimg=$_POST['stdimg'];
 
@@ -32,6 +34,7 @@ if(isset($_POST['submitstudent'])){
 
     $stdquery="INSERT INTO student (std_name,std_no,std_dob,std_pob,std_haddr,std_class) values ('$stdname','$studentNo','$stddob','$placeob','$stdaddr','$stdclass')";
     $stdresult = mysqli_query($conn,$stdquery);
+
     if($stdresult){
 
         $schquery="INSERT INTO schoolrecords (sch_name,sch_addr,d_attd,lev_rd,std_no) values ('$schname','$schaddr','$dateattnd','$lvl','$studentNo')";
@@ -44,7 +47,14 @@ if(isset($_POST['submitstudent'])){
         $imgquery="INSERT INTO studentimage (image,image_desc,std_no) values ('$stdimg','$stdname','$studentNo')";
         $imgresult=mysqli_query($conn,$imgquery);
 
+
         /*
+         *
+        if($schresult && $healthresult && $imgresult){
+            echo "OK";
+        }
+
+
         if($imgresult){
             $target_dir = "studentImages/";
             $target_file = $target_dir . basename($_FILES["stdimage"]["name"]);
@@ -52,7 +62,8 @@ if(isset($_POST['submitstudent'])){
             move_uploaded_file($stdimg,$target_file);
         }
         */
-        echo 'OK';
+
+        echo "OK";
     }
 }
 ?>
