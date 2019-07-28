@@ -167,17 +167,14 @@ function submitStudentInfoForm(e) {
     let stddob= $("#txtdob").val();
     let placeob= $("#txtpob").val();
     let stdaddr= $("#txtstdaddr").val();
-    let stdimg= $("#stdimage").val();
+    //let stdimg= $("#stdimage").val();
+    let stdclass= $("#stdclass").val();
 
     let txtprevsch1= $("#txtprevsch1").val();
     let txtprevschlevel1= $("#txtprevschlevel1").val();
     let txtprevschdate1= $("#txtprevschdate1").val();
     let txtprevschaddr1= $("#txtprevschaddr1").val();
 
-    let txtprevsch2= $("#txtprevsch2").val();
-    let txtprevschlevel2= $("#txtprevschlevel2").val();
-    let txtprevschdate2= $("#txtprevschdate2").val();
-    let txtprevschaddr2= $("#txtprevschaddr2").val();
 
     let txtspecneed= $("#txtspecneed").val();
     let txtsickcon= $("#txtsickcon").val();
@@ -186,28 +183,47 @@ function submitStudentInfoForm(e) {
     let txteyeprob= $("#txteyeprob").val();
     let txtearprob= $("#txtearprob").val();
 
-    let schRecords=[
-        {
-            txtprevsch1:txtprevsch1,
-            txtprevschlevel1:txtprevschlevel1,
-            txtprevschdate1:txtprevschdate1,
-            txtprevschaddr1:txtprevschaddr1
-        },
-        {
-            txtprevsch2:txtprevsch2,
-            txtprevschlevel2:txtprevschlevel2,
-            txtprevschdate2:txtprevschdate2,
-            txtprevschaddr2:txtprevschaddr2
-        }
-    ];
-    let fields={
+    let stdimg = document.getElementById("stdimage").files[0].name;
+
+
+    /*
+
+        let txtprevsch2= $("#txtprevsch2").val();
+        let txtprevschlevel2= $("#txtprevschlevel2").val();
+        let txtprevschdate2= $("#txtprevschdate2").val();
+        let txtprevschaddr2= $("#txtprevschaddr2").val();
+        let schRecords=[
+            {
+                txtprevsch:txtprevsch1,
+                txtprevschlevel:txtprevschlevel1,
+                txtprevschdate:txtprevschdate1,
+                txtprevschaddr:txtprevschaddr1
+            },
+            {
+                txtprevsch:txtprevsch2,
+                txtprevschlevel:txtprevschlevel2,
+                txtprevschdate:txtprevschdate2,
+                txtprevschaddr:txtprevschaddr2
+            }
+        ];
+        //schRecords:schRecords,
+
+     */
+
+        let fields={
         submitstudent:1,
         stdname:stdname,
         stddob:stddob,
         placeob:placeob,
         stdaddr:stdaddr,
         stdimg:stdimg,
-        schRecords:schRecords,
+        stdclass:stdclass,
+
+        txtprevsch:txtprevsch1,
+        txtprevschlevel:txtprevschlevel1,
+        txtprevschdate:txtprevschdate1,
+        txtprevschaddr:txtprevschaddr1,
+
         txtspecneed:txtspecneed,
         txtsickcon:txtsickcon,
         txtmed:txtmed,
@@ -220,7 +236,7 @@ function submitStudentInfoForm(e) {
     //let requestObj=fields;
     if(validation===true){
         let poster= postRequest('studentAction.php',fields,function (e) {
-            window.location="parentForm.php";
+            window.location="parentForm";
         });
         if(poster===true){
             bootbox.alert("Form Submitted");
@@ -240,6 +256,7 @@ function clearStudentTextFields(e) {
                 $("#txtpob").val('');
                 $("#txtstdaddr").val('');
                 $("#stdimage").val('');
+                $("#stdclass").val('');
                 $("#txtprevsch1").val('');
                 $("#txtprevschlevel1").val('');
                 $("#txtprevschdate1").val('');
@@ -317,7 +334,7 @@ function  postRequest(uri,reqObject,callback=null) {
         success	: function(data){
             if(data !="" || data.length !=0){
                 message="Data saved successfully";
-                callback(e);
+                callback();
                 showSnackBarSuccess(message);
                 return true;
             }else{

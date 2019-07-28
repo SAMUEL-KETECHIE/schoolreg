@@ -6,7 +6,7 @@ use ekis_montessori;
 create table student(
     std_id int(11) not null auto_increment,
     std_name varchar(50) not null,
-    std_no varchar(10) not null,
+    std_no varchar(10) not null unique,
     std_dob date not null,
     std_pob varchar(20) not null,
     std_haddr varchar(50),
@@ -15,6 +15,18 @@ create table student(
 );
 
 desc student;
+
+
+create table schoolrecords(
+    id int(11) not null auto_increment,
+    sch_name varchar(20) not null,
+    sch_addr varchar(50) not null,
+    d_attd date not null,
+    lev_rd varchar(10) not null,
+    std_no varchar(10) not null,
+primary key (id)
+);
+desc schoolrecords;
 
 create table parent(
     id int(11) not null auto_increment,
@@ -29,7 +41,7 @@ create table parent(
     m_phoneno varchar(15),
     m_occ varchar(20),
     parent_addr varchar(200),
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    std_no varchar(10) not null references student(std_no) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
 
@@ -39,7 +51,7 @@ create table nextofkin(
     id int(11) not null auto_increment,
     nok_name varchar(50),
     nok_phoneno varchar(15),
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    std_no varchar(10) not null references student(std_no) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
 desc nextofkin;
@@ -50,21 +62,11 @@ create table house(
     h_addr varchar(50) not null,
     h_popu int(11),
     h_lang varchar(50) not null,
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    std_no varchar(10) not null references student(std_no) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
 desc house;
 
-create table schoolrecords(
-    id int(11) not null auto_increment,
-    sch_name varchar(20) not null,
-    sch_addr varchar(50) not null,
-    d_attd date not null,
-    lev_rd varchar(10) not null,
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    primary key (id)
-);
-desc schoolrecords;
 
 create table healthrecords(
     id int(11) not null auto_increment,
@@ -74,7 +76,7 @@ create table healthrecords(
     allegies varchar(30),
     eye_prob varchar(30),
     ear_prob varchar(30),
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    std_no varchar(10) not null references student(std_no) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
 desc healthrecords;
@@ -85,7 +87,7 @@ create table studentimage(
     id int(11) not null auto_increment,
     image varchar(200),
     image_desc varchar(10),
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    std_no varchar(10) not null references student(std_no) ON UPDATE CASCADE ON DELETE CASCADE,
 primary key (id)
 );
 desc studentimage;
@@ -93,7 +95,7 @@ desc studentimage;
 create table otherinfo(
     id int(11) not null auto_increment,
     others varchar(200),
-    std_id int(11) not null references student(std_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    std_no varchar(10) not null references student(std_no) ON UPDATE CASCADE ON DELETE CASCADE,
     primary key (id)
 );
 

@@ -23,7 +23,7 @@ include "../navbar.php";
                     <h3 class="text-center text-primary panel panel-heading txtHead">
                         Admission Form
                     </h3>
-                    <form class="form-horizontal page-white form-card" action="" method="POST">
+                    <form class="form-horizontal page-white form-card" action="" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-1 col-lg-1"></div>
                             <div class="col-md-3 col-lg-3">
@@ -41,6 +41,21 @@ include "../navbar.php";
                                 <br>
                                 <label class="label label-info form-labels" for="txtstdaddr"> <span class="glyphicon glyphicon-map-marker"></span> Address/Location </label>
                                 <input class="form-control" type="text" id="txtstdaddr" name="txtstdaddr" placeholder="Legon" autocomplete="off"/>
+                                <br>
+
+                                <label class="label label-info form-labels" for="stdclass"> <span class="glyphicon glyphicon-level-up"></span> Class </label>
+                                <select id="stdclass" name="stdclass" class="form-control">
+                                    <option value="">-- Select --</option>
+                                    <option value="Nursery1">Nurser 1</option>
+                                    <option value="Nursery2">Nurser 2</option>
+                                    <option value="Nursery3">Nurser 3</option>
+                                    <option value="class1">Class 1</option>
+                                    <option value="Class2">Class 2</option>
+                                    <option value="Class3">Class 3</option>
+                                    <option value="Class4">Class 4</option>
+                                    <option value="Class5">Class 5</option>
+                                    <option value="Class6">Class 6</option>
+                                </select>
                                 <br>
 
                                 <label class="label label-info form-labels" for="stdimage"> <span class="glyphicon glyphicon-picture"></span> Child's Image </label>
@@ -64,7 +79,7 @@ include "../navbar.php";
                                 <input class="form-control" type="date" name="txtprevschdate1" id="txtprevschdate1" autocomplete="off"/>
                                 <br>
                                 <label class="label label-info form-labels" for="txtprevschaddr1"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
-                                <input class="form-control" type="date" name="txtprevschaddr1" id="txtprevschaddr1" autocomplete="off"/>
+                                <input class="form-control" type="text" name="txtprevschaddr1" id="txtprevschaddr1" autocomplete="off"/>
                                 <br>
                                 <label class="label label-info form-labels" for="txtprevsch2"> <span class="glyphicon glyphicon-certificate"></span> Previous School 2 (Optional)</label>
                                 <input class="form-control" type="text" name="txtprevsch2" id="txtprevsch2" placeholder="Palma Int. School" autocomplete="off"/>
@@ -76,7 +91,7 @@ include "../navbar.php";
                                 <input class="form-control" type="date" name="txtprevschdate2" id="txtprevschdate2" autocomplete="off"/>
                                 <br>
                                 <label class="label label-info form-labels" for="txtprevschaddr2"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
-                                <input class="form-control" type="date" name="txtprevschaddr2" id="txtprevschaddr2" autocomplete="off"/>
+                                <input class="form-control" type="text" name="txtprevschaddr2" id="txtprevschaddr2" autocomplete="off"/>
                                 <br>
                                 <hr>
                             </div>
