@@ -27,7 +27,7 @@ include "sidebar.php";
                     <div class="single-card">
                         <h4 class="card-beta"> Total Students</h4>
                         <hr>
-                        <span class="badge badge-dark badger" id="totalStudents">200</span>
+                        <span class="badge badge-dark badger" id="totalStudents"></span>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -64,6 +64,15 @@ include "sidebar.php";
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="alert alert-warning" id="snack_bar_warning"></div>
+                <div class="alert alert-success" id="snack_bar_success"></div>
+                <div class="alert alert-danger" id="snack_bar_danger"></div>
+            </div>
+            <div class="col-md-4"></div>
         </div>
         <!--<div class="overlay"></div>-->
     </div>

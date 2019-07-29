@@ -15,5 +15,6 @@
 		<script src="js/bootbox.min.js"></script>
 		<script src="js/main.js"></script>
         <script src="js/sidebar.js"></script>
+        <script src="js/dashboard.js"></script>
 
     </head>
