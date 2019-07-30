@@ -14,6 +14,7 @@ if(isset($_POST['submitstudent'])){
     $numresult = mysqli_query($conn,$numquery);
     $row=mysqli_fetch_array($numresult);
     $lastid=$row['std_id'];
+    $lastid=$lastid + 1;
     $studentNo= $stdNo . $lastid;
     $_SESSION['STDNO']=$studentNo;
 

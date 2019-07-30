@@ -1,8 +1,13 @@
 <?php
 include '../db.php';
-
+session_start();
 
 if(isset($_POST['moveToEdit'])){
+
+    $studentNo=$_POST['stdNo'];
+    $_SESSION['stdNo']=$studentNo;
+
+    echo $studentNo;
 
 }
 

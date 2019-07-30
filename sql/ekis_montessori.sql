@@ -20,8 +20,8 @@ desc student;
 create table schoolrecords(
     id int(11) not null auto_increment,
     sch_name text not null,
-    sch_addr text not null,
-    d_attd date not null,
+    sch_addr text,
+    d_attd date,
     lev_rd varchar(10) not null,
     std_no varchar(10) not null,
 primary key (id)

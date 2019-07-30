@@ -7,14 +7,31 @@ $(document).ready(function () {
         event.preventDefault();
         let stdNo = $(this).attr("studid");
         console.log(stdNo);
-        deleteStudent(stdNo);
+        bootbox.confirm({
+                message: "Are you sure you want to Delete this student ?",
+                callback: function (result) {
+                    if(result===true){
+                        deleteStudent(stdNo);
+                    }
+                }
+            }
+        );
     });
 
     $("body").delegate("#btn_edit_std","click",function(event){
         event.preventDefault();
         let stdNo = $(this).attr("studid");
         console.log(stdNo);
-        moveToEditStudent(stdNo);
+        bootbox.confirm({
+                message: "Are you sure you want to Edit this student ?",
+                callback: function (result) {
+                    if(result===true){
+                        moveToEditStudent(stdNo);
+                    }
+                }
+            }
+        );
+
     });
 
 });

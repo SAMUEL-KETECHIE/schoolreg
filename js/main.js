@@ -71,7 +71,9 @@ function submitHouseAndFinalInfoForm(e) {
             if(e !=""){
                 message="You have successfully saved the admission form."
                 showSnackBarSuccess(message);
-                window.location="../admission/";
+                window.setTimeout(function () {
+                        window.location="../admission/";
+                    }, 200000);
             }else {
                 message="Failed: Data was not saved. Please check and try again.";
                 showSnackBarWarning(message);

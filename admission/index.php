@@ -81,6 +81,7 @@ include "../navbar.php";
                                 <label class="label label-info form-labels" for="txtprevschaddr1"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
                                 <input class="form-control" type="text" name="txtprevschaddr1" id="txtprevschaddr1" autocomplete="off"/>
                                 <br>
+
                                 <label class="label label-info form-labels" for="txtprevsch2"> <span class="glyphicon glyphicon-certificate"></span> Previous School 2 (Optional)</label>
                                 <input class="form-control" type="text" name="txtprevsch2" id="txtprevsch2" placeholder="Palma Int. School" autocomplete="off"/>
                                 <br>
@@ -93,6 +94,7 @@ include "../navbar.php";
                                 <label class="label label-info form-labels" for="txtprevschaddr2"> <span class="glyphicon glyphicon-envelope"></span> Prev Sch. Address </label>
                                 <input class="form-control" type="text" name="txtprevschaddr2" id="txtprevschaddr2" autocomplete="off"/>
                                 <br>
+
                                 <hr>
                             </div>
                             <div class="col-md-3 col-lg-3">
